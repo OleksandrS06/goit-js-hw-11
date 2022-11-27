@@ -1,5 +1,5 @@
 import axios from "axios";
-const axios = require('axios');
+// const axios = require('axios');
 
 export default class PixabayApi {
   #base_URL = "https://pixabay.com/api/";
@@ -24,7 +24,9 @@ export default class PixabayApi {
         },
       };
 
-      return await axios.get(`${this.#base_URL}`, searchParams);
+      // return await axios.get(`${this.#base_URL}`, searchParams);
+      return await axios(`${this.#base_URL}`, searchParams);
+
     } catch (error) {
       console.log(error);
     }
